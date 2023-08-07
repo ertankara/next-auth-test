@@ -3,7 +3,7 @@ import { signIn } from 'next-auth/react'
 
 export const GoogleLogInBtn = () => {
   const searchParams = useSearchParams()
-  const callbackUrl = searchParams.get('callbackUrl') ?? "/dashboard";
+  const callbackUrl = searchParams.get('callbackUrl') ?? "/profile";
 
   return (
     <button onClick={() => signIn('google', { callbackUrl })} type="button" className="text-black bg-[##210c0a] hover:bg-[##574d4c]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg border-2 text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2">
