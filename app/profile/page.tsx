@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { Title, Divider, ActionLink } from "../components";
 
-export const getUser = async () => {
+const getUser = async () => {
   const session = await getServerSession();
 
   if (!session) {
